@@ -13,7 +13,7 @@ namespace SL5
             const int Ladder = 1;
             const int Snake = 2;
             Random r = new Random();
-            //Repeat Till 100 Position Occurs
+            //Repeat Till Exact 100 Position Occurs
             while (position < Won)
             {
                 int ran = r.Next(1, 7);
