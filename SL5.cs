@@ -13,6 +13,7 @@ namespace SL5
             const int Ladder = 1;
             const int Snake = 2;
             Random r = new Random();
+            //Repeat Till 100 Position Occurs
             while (position < Won)
             {
                 int ran = r.Next(1, 7);
@@ -20,11 +21,13 @@ namespace SL5
                 switch (opt)
                 {
                     case NoPlay:
+                        //If Random Number Is 0
                         Console.WriteLine("You Got No Play");
                         Console.WriteLine("--------------------------");
                         break;
 
                     case Ladder:
+                        //If Random Number Is 1
                         position = currentpos;
                         if (position < Won)
                         {
@@ -38,6 +41,7 @@ namespace SL5
                         break;
 
                     case Snake:
+                        //If Random Number Is 2
                         if (currentpos > 0)
                         {
                             Console.WriteLine("Player Is Bitten By Snake By:" + ran);
