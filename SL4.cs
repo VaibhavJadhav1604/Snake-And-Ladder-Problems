@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SL4
 {
@@ -13,6 +13,7 @@ namespace SL4
             const int Ladder = 1;
             const int Snake = 2;
             Random r = new Random();
+            //Loop Will Execute Till 100 Position
             while (position < Won)
             {
                 int ran = r.Next(1, 7);
@@ -20,11 +21,13 @@ namespace SL4
                 switch (opt)
                 {
                     case NoPlay:
+                        //If Random Number Is 0
                         Console.WriteLine("You Got No Play");
                         Console.WriteLine("--------------------------");
                         break;
 
                     case Ladder:
+                        //If Random Number Is 1
                         position = currentpos;
                         if (position < Won)
                         {
@@ -38,6 +41,7 @@ namespace SL4
                         break;
 
                     case Snake:
+                        //If Random Number Is 2
                         if (currentpos > 0)
                         {
                             Console.WriteLine("Player Is Bitten By Snake By:" + ran);
