@@ -15,17 +15,19 @@ namespace SL6
             Random random = new Random();
             while (position < Won)
             {
-                diecnt++;
+                diecnt++;//Counter Increments Every Time When Condition Is True
                 int ran = random.Next(1, 7);
                 int opt = random.Next(0, 3);
                 switch (opt)
                 {
                     case NoPlay:
+                        //If Random Number Is 0
                         Console.WriteLine("You Got No Play");
                         Console.WriteLine("--------------------------");
                         break;
 
                     case Ladder:
+                        //If Random Number Is 1
                         position = currentpos;
                         if (position < Won)
                         {
@@ -42,6 +44,7 @@ namespace SL6
                         break;
 
                     case Snake:
+                        //If Random Number Is 2
                         if (currentpos > 0)
                         {
                             Console.WriteLine("Player Is Bitten By Snake By:" + ran);
